@@ -1,0 +1,102 @@
+# Simetria de funções
+
+
+:::{#def-func_dom_sim name="Domínio simétrico em relação a origem"}
+Seja $f: \mathbb{R} \rightarrow \mathbb{R}$, dizemos que $f$ tem domínio simétrico em relação a origem se, e somente se $\forall x \in Df \Leftrightarrow -x \in Df$.
+:::
+
+:::{#def-func_dom_sim name="Função par e ímpar"}
+Seja a função real $f$ com domínio simétrico na origem, temos que:
+
+* $f(x)$ é **par** $\Leftrightarrow f(x) = f(-x)$ 
+* $f(x)$ é **ímpar** $\Leftrightarrow f(x) = -f(-x)$ 
+:::
+
+## Propriedades {.unnumbered}
+
+Sejam $\jmath$ e $\Im$ classes de funções tal que $\forall f \in \jmath$ é par e $\forall g \in \Im$ é ímpar, temos as seguintes propriedades, expressas como teoremas.
+
+:::{#thm-func_dom_sim_oposto name="Elemento oposto"}
+$$
+    f(x) - f(-x) = 0 \\
+    g(x) + g(-x)=0 
+$$
+
+:::
+
+:::{#thm-func_dom_sim_sumint name="Somas internas a classe"}
+$$f_i(x) \pm  f_j(x) \in \jmath$$
+$$g_i(x) \pm g_j(x) \in \Im$$
+
+:::{.proof}
+$$h(x) = f_i(x)+f_j(x)=f_i(-x)+f_j(-x)=h(-x)$$
+$$h(x) = f_i(x)-f_j(x) = f_i(-x)-f_j(-x)=h(-x)$$
+$$h(x)=g_i(x)+g_j(x)=-g_i(x)-g_j(-x)=-h(-x)$$
+$$h(x)=g_i(x)-g_j(x)=g_i(x)+g_j(-x)=-h(-x)$$
+:::
+
+:::
+
+
+
+:::{#thm-func_dom_sim_prodint name="Produto interno a classe"}
+$$f_i(x)f_j(x) \in \jmath$$
+$$g_i(x)g_j(x) \in \jmath$$  
+
+
+:::{.proof}
+$$f_i(x)f_j(x) = f_i(-x)f_j(-x)=f_i(-x)f_j(-x)$$ 
+$$g_i(x)g_j(x)=(-g_i(-x))(-g_j(-x))=g_i(-x)g_j(-x)$$
+:::
+:::
+
+
+:::{#thm-func_dom_sim_prodinter name="Produto interclasse"}
+$f(x)g(x) \in \Im$
+
+:::{.proof}
+$$fg(x) = f(x)g(x)=f(-x)(-g(-x))=-fg(-x)$$
+:::
+:::
+
+
+:::{#thm-func_dom_sim_somainter name="Soma interclasse"}
+Se $Im f \neq 0$ e $Im g \neq 0$ então seja $h(x) = f(x) + g(x)$, temos que $h(x) \notin \jmath$ e $h(x) \notin \Im$.
+
+:::{.proof}
+$$h(x) = f(x) + g(x) = f(-x)-g(-x) \therefore h(x) \neq h(-x) \wedge h(x) \neq -h(-x)$$
+:::
+
+:::
+
+:::{#thm-func_dom_sim_decomp name="Decomposição em função par e ímpar"}
+$\forall h : \mathbb{R} \rightarrow \mathbb{R}$ com domínio simétrico em relação a origem, podemos definir as funções $h_{\text{ímpar}} = h(x)-h(-x) \text{ e } h_{\text{par}} = h(x)+h(-x)$ de modo que $2h = h_{\text{par}} + h_{\text{ímpar}}$.
+
+:::{.proof}
+
+
+**Parte 1**
+Mostremos que $h_{\text{par}}(x) = \frac{h(x) + h(-x)}{2}$ é par:
+
+$$
+h_{\text{par}}(-x) = \frac{h(-x) + h(--x)}{2} = \frac{h(-x) + h(x)}{2} = h_{\text{par}}(x)
+$$
+
+**Parte 2**
+Mostremos que $h_{\text{impar}}(x) = \frac{h(x) - h(-x)}{2}$ é ímpar:
+
+$$
+h_{\text{impar}}(-x) = \frac{h(-x) - h(--x)}{2} = \frac{h(-x) - h(x)}{2} = -\frac{h(x) - h(-x)}{2} = -h_{\text{impar}}(x)
+$$
+**Parte 3**
+Soma das partes par e ímpar:
+
+$$
+h_{\text{par}}(x) + h_{\text{impar}}(x) = \frac{h(x) + h(-x)}{2} + \frac{h(x) - h(-x)}{2} = \frac{2h(x)}{2} = h(x) 
+\therefore 
+h(x) = \frac{h(x) + h(-x)}{2} + \frac{h(x) - h(-x)}{2}
+$$
+
+:::
+:::
+

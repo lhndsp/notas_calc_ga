@@ -1,0 +1,171 @@
+# Espiral
+
+```{r}
+#| label: setup
+#| warning: false
+#| echo: false
+#| include: false
+library(ggplot2)
+library(latex2exp)
+```
+
+Sejam os vetores $\vec{u}_1, \vec{u}_2, \dots, \vec{u}_n \in \mathbb{V}^2$, $\hat{v}_0, \hat{v}_1, \dots, \hat{v}_n \in \mathbb{V}^2 \mid \hat{v}_i \perp \vec{u}_{i-1}$ e que $\vec{u}_i = \vec{u}_{i-1}+\hat{v}_{i-2}$ para $i > 1$.
+
+![](../images/espiral.gif)
+
+:::{#exr-espiral1}
+Demonstrar que $|\vec{u}_n| = \sqrt{n}, n \in \mathbb{N}^*$
+:::
+
+:::{#exr-espiral2}
+Demonstrar que $<\vec{u}_n, \vec{u}_{n+1}> = n$
+
+Seja $\gamma$ o triângulo $\triangle(\vec{u}_n,\vec{u}_{n+1},\vec{v_{n-1}})$ com $\vec{u}_{n+1}\perp\vec{v_{n-1}}$ e $\theta = \angle \vec{u}_{n}\vec{u}_{n+1}$.
+
+```{r}
+#| label: imgex1demo
+#| echo: false
+#| warning: false
+
+ggplot(data.frame(
+  x = c(0, 1, 0), 
+  y = c(0, 0, 0), 
+  xend = c(1, 1, 1), 
+  yend = c(0, 1, 1),
+  label = c("\\vec{u}_n", "\\vec{u}_{n-1}", "\\vec{v}_{n-1}")
+)) +
+  geom_segment(aes(x = x, y = y, xend = xend, yend = yend, colour = label),
+               arrow = arrow(type = "closed", length = unit(0.05, "inches")),
+               linewidth = 1.2) +
+  geom_path(data = data.frame(
+    x = .1 * cos(seq(0, pi/4, length.out = 100)),
+    y = .1 * sin(seq(0, pi/4, length.out = 100))
+  ), aes(x = x, y = y), linewidth = 0.9) +
+  annotate("text", x = .13 * cos((pi/4) / 2),
+           y = .1 * sin((pi/4) / 2),
+           label = TeX("$\\theta$"), size = 6) +
+  scale_colour_manual(
+    values = c("\\vec{u}_n" = "#a37199", 
+               "\\vec{u}_{n-1}" = '#b84c3c', 
+               "\\vec{v}_{n-1}" = '#366f69'),
+    labels = c("\\vec{u}_n" = TeX("$\\vec{u}_n$"), 
+               "\\vec{u}_{n-1}" = TeX("$\\vec{u}_{n-1}$"), 
+               "\\vec{v}_{n-1}" = TeX("$\\vec{v}_{n-1}$"))
+  ) + labs(colour = '') + theme_void()
+```
+
+Assim,temos que:
+
+$$
+<\vec{u}_n, \vec{u}_{n+1}> = 
+cos\theta|\vec{u}_{n+1}||\vec{u}_{n}| =
+\frac{|\vec{u}_{n}|}{|\vec{u}_{n+1}|}|\vec{u}_{n+1}||\vec{u}_{n}| =
+\frac{\sqrt{n}}{\sqrt{n+1}}\sqrt{n}\sqrt{n+1}=n
+$$
+
+```{r}
+#| echo: false
+#| warning: false
+f_costheta <- function(n) sqrt(n)/sqrt(n+1)
+f_dotprod <- function(n) sqrt(n)*sqrt(n+1)*f_costheta(n)
+
+
+x <- 1:100
+y <- lapply(x, f_dotprod) |> unlist()
+
+ggplot() + 
+  geom_point(aes(x= x, y=y), stat = 'identity') +
+  theme_bw() + 
+  labs(title=TeX("$f(x) = \\langle u_n, u_{n+1} \\rangle$"),
+       x='n', y=TeX('f(x)'))
+```
+:::
+
+:::{#exr-espiral3}
+Determinar a função $f: \mathbb{N} \rightarrow \mathbb{R}$ que expresse o ângulo entre o n-ésimo vetor com vetor n-1, para $n > 1$
+
+Sendo $cos\theta = \angle\vec{u}_{n-1}\vec{u}_n = \frac{\sqrt{n-1}}{\sqrt{n}} \therefore \theta = arccos(\frac{\sqrt{n-1}}{\sqrt{n}})$
+
+
+```{r}
+#| echo: false
+#| warning: false
+f_angle <- function(n) acos(f_costheta(n))
+
+x <- 1:100
+y <- lapply(x, f_angle) |> unlist()
+
+ggplot() +
+  geom_point(aes(x = x, y = y * (180 / pi))) +
+  theme_bw() +
+  labs(
+    title = TeX(r"(f(x) = $\angle(u_n, u_{n+1}) $)"),
+    x = 'n',
+    y = TeX('f(x)\\degree')
+  )
+```
+
+:::
+
+:::{#exr-espiral4}
+Determinar a função $g: \mathbb{N} \rightarrow \mathbb{R}$ que expresse o área do triângulo formado por $\vec{u}_n, \vec{u}_{n+1}, \hat{v}_{n-1}$
+
+Sendo $P = \triangle(\vec{u}_n,\vec{u}_{n+1},\vec{v_{n-1}})$ com $\vec{u}_{n+1}\perp\vec{v_{n-1}}$, $A(P) = \frac{|\vec{u}_{n}||\vec{u}_{n+1}|sen\theta}{2} = \frac{\sqrt{n}\sqrt{n+1}sen\theta}{2}$, sendo que $\sqrt{n+1}$ é modulo da hipotenusa e $sen\theta= \frac{|\vec{v}_{n-1}|}{\sqrt{n+1}}=\frac{1}{\sqrt{n+1}}$, a equaçao fica como $\frac{\sqrt{n}\sqrt{n+1}\frac{1}{\sqrt{n+1}}}{2} = \frac{\sqrt{n}}{2}$
+
+```{r}
+#| echo: false
+#| warning: false
+f_area <- function(n) sqrt(n)/2
+
+x <- 1:100
+y <- lapply(x, f_area) |> unlist()
+
+ggplot() + 
+  geom_point(aes(x = x, y = y)) +
+  theme_bw() + 
+  labs(
+    title = TeX(r"($f(x) = A_{\uptriangle(u_n, u_{n+1}, v_{n-1})} = \frac{\sqrt{n}}{2}$)"),
+    x = 'n', 
+    y = 'f(x)'
+  )
+```
+:::
+
+
+
+:::{#exr-espiral5}
+Uma função $h: \mathbb{N} \rightarrow \mathbb{R}$ que determine a coordenada $x$ do n-esimo vetor e uma função $i: \mathbb{N} \rightarrow \mathbb{R}$ que determine a coordenada $y$ do n-esimo vetor
+
+No $\triangle(\vec{u}_n,O_x)$ com ângulo $\alpha$, o cateto oposto tem módulo igual a coordenada $y_{\vec{u}_n}$ e o cateto adjacente tem módulo $x_{\vec{u}_n}$, $alpha$ pode ser definido com a soma dos ângulo dos n vetores com seu vetor antecedente, ou seja $\alpha=\angle\vec{u}_nO_x = \sum_{k=1}^n arccos(\frac{\sqrt{n-1}}{\sqrt{n}})$, logo:
+
+$$
+x_{\vec{u}_n} = cos(\sum_{k=1}^n arccos(\frac{\sqrt{n-1}}{\sqrt{n}})) \sqrt{n} \\
+y_{\vec{u}_n} = sen(\sum_{k=1}^n arccos(\frac{\sqrt{n-1}}{\sqrt{n}})) \sqrt{n} \\
+$$
+
+```{r}
+#| echo: false
+#| warning: false
+sum_angle <- function(n) lapply(1:n, f_angle) |> unlist() |> sum()
+
+n <- 1:100
+
+x_un <- (lapply(n, sum_angle) |> unlist() |> cos())*sqrt(n)
+y_un <- (lapply(n, sum_angle) |> unlist() |> sin())*sqrt(n)
+
+
+ggplot() + 
+  geom_point(aes(x = n, y = x_un, color = 'ux')) +
+  geom_point(aes(x = n, y = y_un, color = 'uy')) +
+  theme_bw() + 
+  ylab('coordenadas') +
+  scale_color_manual(values = c('ux' = 'red', 'uy' = 'blue'),
+                     labels = c(TeX(r'($u_x = cos(\sum_{\k=1}^n arccos(\frac{\sqrt{\n-1}}{\sqrt{\n}})) \sqrt{\n}$)'), 
+                                TeX(r'($u_y = sen(\sum_{\k=1}^n arccos(\frac{\sqrt{\n-1}}{\sqrt{\n}})) \sqrt{\n}$)')), name = '')
+```
+:::
+
+
+
+
+

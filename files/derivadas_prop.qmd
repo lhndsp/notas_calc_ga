@@ -1,0 +1,104 @@
+# Propriedades da derivada
+
+
+:::{#thm-derivadd name="Adição"}
+
+$$
+    (f + g)' = f' + g'
+$$
+
+::: {.proof}
+
+Por definição, $(f+g)'$ tem a forma: 
+$$
+    \lim_{h \to 0} \frac{f(x+h)+g(x+h)-f(x)-g(x)}{h}
+$$ 
+ao aplicarmos a propriedade do limite de uma soma $\lim_{x\to a}f(x)+g(x) = \lim_{x\to a}f(x)+\lim_{x\to a}g(x)$ temos que: 
+$$
+    (f+g)'= \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} + \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} = f' + g'
+$$
+:::
+
+:::
+
+:::{#thm-derivlinear name="Lineraridade"}
+$$
+    (cf)' = c \cdot  f', \ c \in \mathbb{R}
+$$
+:::
+
+:::{#thm-derivprod name="Produto --- Regra de Leibniz"}
+$$
+    (fg)' = f'g + fg'
+$$
+
+::: {.proof}
+$$
+    (fg)' = \lim_{h \to 0} \frac{f(x+h)g(x+h) - f(x)g(x)}{h}
+$$
+A idéia para demonstração é fazer com que o numerador tenha a forma das derivadas f' e g',
+Podemos fazer isso somando e subtraindo o termo $g(x)f(x+h)$, ficando com:
+
+$$
+    \begin{split}
+        (fg)' & =  \lim_{h \to 0} \frac{ \textcolor{red}{f(x+h)g(x)}  + f(x+h)g(x+h) - f(x)g(x) \textcolor{red}{- f(x+h)g(x)}}{h} = \\
+              &  =  \lim_{h \to 0} g(x)\frac{f(x+h)- f(x)}{h} \cdot \lim_{h \to 0} f(x+h)\frac{g(x+h) - g(x)}{h}
+    \end{split}
+$$
+
+No primeiro limite, é imediato de que $\lim_{h \to 0} g(x)\frac{f(x+h)- f(x)}{h} = g(x)f'(x)$. 
+No segundo, ao aplicarmos o $h \to 0$ temos que $\lim_{h \to 0} f(x+h)\frac{g(x+h) - g(x)}{h} = f(x)g'(x)$.
+
+Portanto:
+
+$$
+(fg)' = \lim_{h \to 0} \frac{f(x+h)g(x+h) - f(x)g(x)}{h} = f'(x)g(x) + f(x)g'(x)
+$$
+:::
+
+:::
+
+:::{#thm-derivdiv name="Quociente"}
+$$
+    (\frac{f}{g})' = \frac{f'g - fg'}{g^2}
+$$
+
+::: {.proof}
+Fazendo uso da equivalência $\frac{f}{g} = f\frac{1}{g}$ podemos desenvolver usando @thm-derivprod, precisamos então encontrar $(\frac{1}{g})'$, como se segue:
+$$
+    \lim_{h \to 0} \frac{ \frac{1}{g(x+h)} - \frac{1}{g(x)} }{h} = 
+    \lim_{h \to 0} \frac{\frac{g(x)-g(x+h)}{g(x)g(x+h)}}{h} =
+    \lim_{h \to 0} \frac{g(x)-g(x+h)}{h}\frac{1}{g(x)g(x+h)}
+$$
+Temos que $-g(x+h)+g(x) = -\left[g(x+h) - g(x)\right]$ e aplicando a propriedade do limite de um produto
+$$
+    \lim_{h \to 0} \frac{g(x)-g(x+h)}{h}\frac{1}{g(x)g(x+h)} = 
+    \lim_{h \to 0} \frac{g(x)-g(x+h)}{h} \cdot \lim_{h \to 0}\frac{1}{g(x)g(x+h)}
+$$
+O primeiro fator é imediato ser $-g'$ quanto ao segundo ao aplicar $h \to 0$ 
+temos $\frac{1}{g^2} \ \therefore \ (\frac{1}{g})' = \frac{-g'}{g^2}$.
+Voltando a alínea da demonstração, temos que:
+$$
+    \begin{split}
+        (\frac{f}{g})' & = f'\frac{1}{g}+f\frac{-g'}{g^2} = \frac{g^2 f'-gfg'}{g^3} = \frac{f'g-fg'}{g^2}
+    \end{split}
+$$
+:::
+
+:::
+
+:::{#thm-derivcadeia name="Regra da Cadeia --- Derivação de funcões compostas"}
+$$
+    f(g)' = f'(g) \cdot g'
+$$
+
+:::{.proof}
+$$
+    \lim_{h \to 0} \frac{f\left[ g(x)+h\right] - f\left[g(x)\right]}{h}
+$$ 
+:::
+
+:::
+
+
+

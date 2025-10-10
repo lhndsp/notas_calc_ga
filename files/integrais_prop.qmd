@@ -1,0 +1,88 @@
+# Propriedades do Integral
+
+A seguir são apresentadas as propriedades do integral como teoremas, bem como suas demonstrações.
+
+
+:::{#thm-intadd name="Adição"}
+$$
+    \int_a^b [s(x) + t(x)]dx = \int_a^b s(x)dx + \int_a^b t(x)dx
+$$
+
+:::
+
+:::{#thm-inthomo name="Homogeniedade"}
+$$
+    \int_a^b cs(x)dx = c \int_a^b s(x)dx, \ c \in \mathbb{R}
+$$
+
+:::
+
+
+:::{#thm-intcomp name="Comparabilidade"}
+$$
+    \int_a^b s(x)dx < \int_a^b t(x) \Leftrightarrow s(x) < t(x) \ \forall \ x \in \left[a, b\right] 
+$$
+
+:::
+
+:::{#thm-intaddintv name="Aditividade com respeito ao intervalo de integração"}
+$$
+    \int_a^c s(x)dx + \int_c^b s(x)dx = \int_a^b s(x)dx, \ a<c<b
+$$
+
+:::
+
+:::{#thm-intinvar name="Invariância sob translação"}
+$$
+    \int_a^b s(x)dx = \int_{a+c}^{b+c} s(x)dx, \ \forall \ c \in \mathbb{R}
+$$
+
+:::
+
+
+:::{#thm-intdilatacao name="Dilatação ou contração do intervalo de integração"}
+$$
+    \int_{ka}^{kb} s( \frac{x}{k} )dx = k \int_a^b s(x)dx, \ k > 0
+$$
+
+:::
+
+:::{#thm-intsimetria name="Simetria"}
+$$
+    \int_b^a s(x)dx = -\int_a^b s(x)dx, \ a<b
+$$
+
+:::
+
+
+:::{#thm-intneutro name="Elemento neutro"}
+$$
+    \int_a^a s(x)dx = 0
+$$
+
+:::
+
+
+:::{#thm-intaddintv1 name="Generalização do Teorema da Aditividade por Simetria e Elemento Neutro"}
+$$
+    \int_a^a s(x)dx = 0
+$$
+
+:::
+
+
+:::{#thm-intreflex name="Reflexão"}
+$$
+    \int_b^a s(x)dx = \int_{-a}^{-b} s(-x)dx
+$$
+:::
+
+
+:::{#thm-intlinearidade name="Linearidade"}
+$$
+    \int_a^b [c_1s(x)+c_2t(x)]dx = c_1 \int_a^b s(x)dx + c_2 \int_a^b t(x)dx
+$$
+:::
+
+
+![](../images/riemann_cos.gif)

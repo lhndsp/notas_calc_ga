@@ -1,0 +1,123 @@
+# Números Reais
+
+## Axiomas e teoremas de corpo
+
+Para $a,b,c,d \in \mathbb{R}$
+
+::: {#cnj-realcomu name="Comutatividade"}
+
+$$a + b = b + a,\ ab = ba \quad \forall a,b \in \mathbb{R}$$
+:::
+
+
+::: {#cnj-realassos name="Associatividade"}
+
+$$a + (b + c) = (a + b) + c,\ a(bc) = (ab)c$$
+
+::: {#cnj-realdistrib name="Distributividade"}
+$$a(b + c) = ab + ac \quad$$
+
+::: {#cnj-realelemneutro name="Elemento neutro"}
+$$\exists !\ 0, 1 \in \mathbb{R} \mid a + 0 = a, \ 1a = a$$
+
+
+::: {#cnj-realinvadd name="Inverso aditivo"}
+$$\forall a \in \mathbb{R} \exists !\ (-a) \in \mathbb{R} \mid a + (-a) = 0$$
+
+::: {#cnj-realinvprod name="Inverso multiplicativo"}
+$$\forall a \in \mathbb{R} \exists !\ (a^{-1}) \in \mathbb{R} \mid a(a^{-1}) = 1$$
+
+:::{#thm-realsimpladd name="Simplificação para adição"}
+$$
+\forall a,b,c \in \mathbb{R} \mid a+b=a+c \Rightarrow b = c
+$$
+:::
+
+:::{#thm-realsub name="Subtração"}
+$$
+\forall a,b \in \mathbb{R}\ \exists!\ x \in \mathbb{R} \mid a + (-x) = b \equiv a-x=b 
+$$
+:::
+
+:::{#thm-realdiv name="Divisão"}
+$$
+\forall a,b \in \mathbb{R} \ \exists!\ x \in \mathbb{R} \mid xb=a, \ \frac{a}{x}=b, \ \frac{a}{b}=x
+$$
+:::
+
+:::{#thm-realfracadd name="Soma de frações"}
+$$
+a,c \in \mathbb{R} \wedge b,d \in \mathbb{R}^* \Rightarrow
+\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd} 
+\quad \text{e} \quad 
+\frac{a}{b} - \frac{c}{d} = \frac{ad - bc}{bd}
+$$
+:::
+
+:::{#thm-realfraceq name="Frações Iguais"}
+$$
+\forall a,c \in \mathbb{R}, \ \forall b,d \in \mathbb{R}^* \Rightarrow \frac{a}{b} = \frac{c}{d} \Leftrightarrow ad = bc
+$$
+
+:::{.proof}
+Temos que $\frac{a}{b}=\frac{c}{d} \Leftrightarrow \frac{a}{b}-\frac{c}{d} = 0$ e por @thm-realfracadd $\frac{a}{b}-\frac{c}{d}=\frac{ad-bc}{dc}=0 \Leftrightarrow ad-bc=0 \Leftrightarrow ad=bc$
+:::
+
+:::
+
+
+
+
+
+:::{#thm-realfracinv name="Recíproco de frações"}
+$$
+a, b \in \mathbb{R}^* \Rightarrow \frac{1}{\frac{a}{b}} = \frac{b}{a}
+$$
+
+:::{.proof}
+Pelo @cnj-realinvprod temos que $\exists! x \in \mathbb{R}^* \mid \frac{a}{b}x=1 \Leftrightarrow ax=b \Leftrightarrow x = \frac{b}{a}$
+:::
+
+:::
+
+
+:::{#thm-realfracprod name="Produto de frações"}
+$$
+a \in \mathbb{R} \wedge b,c,d \in \mathbb{R}^* \Rightarrow
+\frac{a}{b}\frac{c}{d} = \frac{ac}{bd} 
+\quad \text{e} \quad
+\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \frac{d}{c}
+$$
+
+:::{.proof}
+Pelo @cnj-realinvprod $\frac{a}{b}\frac{c}{d} = a\frac{1}{b}c\frac{1}{d}$ e por @cnj-realcomu $a\frac{1}{b}c\frac{1}{d} = ac\frac{1}{b}\frac{1}{d} = \frac{ac}{bd}$
+:::
+
+:::
+
+## Axiomas e teoremas de ordem
+
+:::{#cnj-realtricot name="Tricotomia"}
+
+$$
+\forall a,b \in \mathbb{R} \mid a < b \vee a = b \vee a > b
+$$
+:::
+
+
+:::{#cnj-realcont name="Continuidade"}
+
+$$
+\forall x \in \mathbb{R}\ \exists !\ a,b,c,d \in \mathbb{R} \mid x=a+b \ \wedge \ x = cd
+$$
+:::
+
+:::{#cnj-realordem name="Ordem"}
+
+$$\forall a,b,c,d \in \mathbb{R} \mid a < b \Rightarrow c < d \Leftrightarrow ac < bd$$
+:::
+
+
+
+
+

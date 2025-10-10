@@ -1,0 +1,82 @@
+# Funções Polinomiais Reais
+
+:::{#def-polinomio name="Função polinomial"}
+$$
+  P: \mathbb{R} \rightarrow \mathbb{R} \mid P(x) = a_0 + a_1x + \dots + a_nx^n = \sum_{k=1}^n a_kx^k, \forall a \in \mathbb{R}
+$$
+:::
+
+
+Sendo assim, um polinômio é uma função definida pela soma de uma função constante $a_0$ e $n$ funções potência $a_kx^k$ sendo $n$ o *grau* $\delta$ do polinômio e os fatores $a_k$ os *coeficientes* do polinômio, a função constante também pode ser vista como uma uma função potencia de expoente 0.
+
+## Operações {.unnumbered}
+
+Dados os polinômios $f(x) = \sum_{k=1}^n a_kx^k$ e $g(x) = \sum_{k=1}^m b_kx^k$ estão definidas as operações:
+
+:::{#def-polinomionulo name="Polinômio Nulo"}
+$$
+    f(x) = 0 \ \forall x \in \mathbb{R} \Leftrightarrow  \sum_{k=1}^n a_kx^k = 0 \Leftrightarrow a_k = 0
+$$
+:::
+
+
+
+:::{#def-polinomioigual name="Igualdade"}
+$$
+  \begin{aligned}
+    f(x) = g(x)  & \Leftrightarrow \sum_{k=1}^n a_kx^k = \sum_{k=1}^m b_kx^k \\
+    & \Leftrightarrow \sum_{k=1}^n a_kx^k - \sum_{k=1}^m b_kx^k = 0 \\
+    & \Leftrightarrow \sum_{k=1}^{\max\{m,n\}} a_kx^k - b_kx^k = 0 \\
+    & \Leftrightarrow \sum_{k=1}^{\max\{m,n\}} (a_k - b_k)x^k = 0 \\
+    & \Leftrightarrow a_k = b_k
+  \end{aligned}
+$$
+:::
+
+:::{#def-polinomiosoma name="Soma"}
+
+$$
+  f(x) + g(x) = \sum_{k=1}^n a_kx^k + \sum_{k=1}^m b_kx^k = \sum_{k=1}^{\max{m,n}} (a_k + b_k)x^k
+$$
+:::
+
+:::{#def-polinomioprod name="Produto"}
+
+$$
+  f(x)g(x) =
+  \begin{aligned}
+        & a_0b_0
+    + a_0b_1x
+    + a_0b_2x^2
+    + \cdots
+    + a_0b_mx^m     \\
+    +\  & a_1b_0x
+    + a_1b_1x^2
+    + a_1b_2x^3
+    + \cdots
+    + a_1b_mx^{m+1} \\
+    +\  & a_2b_0x^2
+    + a_2b_1x^3
+    + a_2b_2x^4
+    + \cdots
+    + a_2b_mx^{m+2} \\
+        & \vdots    \\
+    +\  & a_nb_0x^n
+    + a_nb_1x^{n+1}
+    + a_nb_2x^{n+2}
+    + \cdots
+    + a_nb_mx^{m+n}
+  \end{aligned}
+  \equiv \sum_{k=0}^{m+n} \left( \sum_{i=0}^k a_i b_{k-i} \right) x^k
+$$
+:::
+
+:::{#def-polinomiodiv name="Divisão"}
+
+Na divisão $\frac{f(x)}{g(x)}$ o objetivo é definir outros dois polinômios $q(x) \text{ e } r(x)$ chamados quociente e resto respectivamente, tais que:
+
+1. $f(x) = g(x)q(x) + r(x)$
+2. $\delta r < \delta g$
+
+Por (Soma), temos que $\delta f = \max (\delta qg, \delta r)$ e como $\delta r < \delta g \Rightarrow \delta f = \delta gq = \delta g + \delta q \Rightarrow \delta q = |\delta f - \delta g|$
+:::

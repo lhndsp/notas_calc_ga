@@ -1,0 +1,43 @@
+project:
+  type: book
+
+book:
+  title: "Notas de Aula: Cálculo e Geometria Analítica"
+  author: "Lucas Porto"
+  date: "10/6/2025"
+  chapters:
+    - index.qmd
+    # - intro.qmd
+    # - summary.qmd
+    - files/reais_intro.qmd
+    - files/simetria_funcoes_reais.qmd
+    - files/polinomios.qmd
+    - files/derivadas_prop.qmd
+    - files/integrais_prop.qmd
+    - files/ex_espiral.qmd
+    - files/references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+
+
+crossref:
+  thm-title: Teorema
+  thm-prefix: teorema
+  def-title: Definição
+  def-prefix: definição
+  cor-title: Corolário
+  cor-prefix: corolário
+  cnj-title: Axioma
+  cnj-prefix: axioma
+  exr-title: Exercício
+  exr-prefix: exercício
+
+    
+
+
