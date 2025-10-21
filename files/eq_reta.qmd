@@ -1,0 +1,66 @@
+# Equações da reta
+
+## Forma geral da equação da reta {.unnumbered}
+
+::: {#thm-retaperp name="Retas perpendiculares"}
+Sejam as retas $r,s \in \mathbb{R}^2$ tal que ambas tem intersecção em $O$, se tomarmos quaisquer $P_1=(a, b) \in r$ e $P_2=(c, d) \in s$, temos que:
+
+$$
+  r \perp s \Leftrightarrow ac + bd = 0
+$$
+
+::: {.proof}
+Pelo teorema de pitagoras, temos:
+
+$$
+\begin{aligned}
+  & r \perp s \Leftrightarrow |\overline{OP_1}|^2 + |\overline{OP_2}|^2 = |\overline{P_1P_2}|^2 \therefore \\
+   \therefore\ & \left[(a^2-0^2) + (b^2-0^2)\right] + \left[(c^2-0^2) + (d^2-0^2)\right] = (a-c)^2 + (b-d)^2 \therefore \\
+   \therefore\ & a^2 + b^2 + c^2 + d^2 = a^2 - 2ac + c^2 + b^2 -2bd + d^2 \therefore \\
+   \therefore\ & -2ac-2bd = 0 \Leftrightarrow ac + bd = 0
+\end{aligned}
+$$
+
+:::
+
+
+:::
+
+
+::: {#thm-eqreta name="Equação geral da reta"}
+$$
+  \forall \ a,b,c \in \mathbb{R} \mid a^2+b^2 \neq 0 \Rightarrow 
+  \exists! \ r \in \mathbb{R}^2 \mid r : ax+by=c
+$$
+
+::: {.proof}
+Seja $r$ uma reta definida em $\mathbb{R}^2$ tal que $P_1=(x_1, y_1)$ e $P_2=(x_2, y_2)$ pertençam a $r$, dado um ponto $A=(a,b)$ no mesmo plano que satisfaça:
+
+- $A \notin r$
+- $a^2 + b^2 \neq 0 \equiv A\neq (0, 0)$;
+- $\overline{OA} \perp r$
+
+Por @thm-retaperp, temos que:
+
+$$
+  a(x_1-x_2)+b(y_1-y2)=0 \therefore ax_1 - ax_2 + by_1 - by_2 = 0 \therefore ax_1+by_1 = ax_2 + by_2 \equiv ax+b=c
+$$
+
+:::
+
+:::
+
+
+
+## Forma explicíta equação da reta {.unnumbered}
+
+Seja $r:ax+by=c$ uma reta qualquer em $\mathbb{R}^2$ que contenha os pontos $P_1=(x_1,y_1)$ e $P_2=(x_2,y_2)$ com $P_1 \neq P_2$ e um ponto $P_3 \notin r \ \mid P_3 = (x_2, y_1)$ temos então um triângulo retângulo em $P_3$, com catetos $\overline{P_1P_3}$ e $\overline{P_3P_2}$ paralelos a $O_x$ e $O_y$ respectivamente.
+
+
+
+
+
+
+
+
+

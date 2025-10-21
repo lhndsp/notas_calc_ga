@@ -7,11 +7,11 @@ $$
 :::
 
 
-Sendo assim, um polinômio é uma função definida pela soma de uma função constante $a_0$ e $n$ funções potência $a_kx^k$ sendo $n$ o *grau* $\delta$ do polinômio e os fatores $a_k$ os *coeficientes* do polinômio, a função constante também pode ser vista como uma uma função potencia de expoente 0.
+Assim, uma função polinomial é a soma de uma função constante $a_0$ e $n$ funções potência $a_kx^k$ sendo $n$ o *grau* $\delta$ da função e os fatores $a_k$ os *coeficientes*, a função constante também pode ser vista como uma uma função potencia de expoente 0, ou seja $a_0x^0$.
 
 ## Operações {.unnumbered}
 
-Dados os polinômios $f(x) = \sum_{k=1}^n a_kx^k$ e $g(x) = \sum_{k=1}^m b_kx^k$ estão definidas as operações:
+Dados os funções $f(x) = \sum_{k=1}^n a_kx^k$ e $g(x) = \sum_{k=1}^m b_kx^k$ estão definidas as operações:
 
 :::{#def-polinomionulo name="Polinômio Nulo"}
 $$

@@ -1,4 +1,5 @@
-# Espiral
+# Espiral de Teodoro
+
 
 ```{r}
 #| label: setup

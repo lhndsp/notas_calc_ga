@@ -1,0 +1,60 @@
+
+# Probabilidade Básica
+
+
+::: {#def-espacoamostral name="Espaço amostral e eventos"}
+Um conjunto de $n$ eventos $\Omega$ é chamado **espaço amostral**, sendo os elementos $\{ \omega_1, \ldots, \omega_n \}$ chamados **eventos simples** e os subconjuntos $A_j \in \Omega$ tal que, $A_j$ é composto por $m$ eventos simples chamados se **eventos**
+:::
+
+
+::: {#def-prob name="Probabilidade"}
+Dado um espaço amostral $\Omega$, probabilidade é a função $P$ que associa a cada evento simples $\omega_i$ 
+um valor $x_i \in \left[0, 1\right] $ que representa a possobilidade de ocorrencia desse evento.
+Formalmente $P: \Omega \longrightarrow \left[0, 1\right] $ sendo  $\omega_i \in \Omega \ | \ P(\omega_i) = 0$
+chamado evento impossível e $\omega_i \in \Omega \ | \ P(\omega_i) = 1$ evento certo. Ficam então, evidente os axiomas:
+
+1) $P(\Omega) = 1$
+2) $P(\varnothing) = 0$
+3) $P(A_i) = \sum_{j}^{|A_i|} \omega_j | \omega_j \in A_i$
+4) $0 \leqslant P(A_i) \leqslant 1$
+    
+:::
+
+Noutras palavras, probabilidade é a abstração numérica da possibilidade de ocorrencia de um certo evento dentre conjunto de eventos possiveis num experimento. Surgem então correntes que se destacam na formulação de $P(\omega_i)$, sendo as príncipais:
+
+
+::: {#def-probclassic name="Probabilidade Classíca"}
+Dado $A_i \in \Omega \ \mid \ A_i: \left\{\omega_1, ..., \omega_n\right\}, ||\Omega||=N \Rightarrow P(A_i) = \frac{n}{N}$, ou seja, ao realizar um experimento, computamos como probabilidade de ocorrência de $A_i$ como a razão entre os $n$ eventos simples que compoe o evento em questão e o total de eventos simples possíveis.
+:::
+
+::: {#def-probfreq name="Probabilidade Frequentista"}
+Dado $A_i \in \Omega$, a corrente frequentista sugere que, ao repertimos um experimento sob as mesmas circunstâncias (ou próximo disso) $N$ vezes, com $N \to \infty$, a razão $\frac{n}{N}$ tente para a constante $P(A_i)$ com $n$ sendo a quantidade de ocorrências de do evento em questão dentre as $N$ repetições do experimento. Formalmente:
+
+$$
+P(A_i) = \lim_{N \to \infty} \frac{N_{A_i}}{N}
+$$
+
+:::
+
+
+```{r}
+set.seed(123)  # para reprodutibilidade
+
+N <- seq(10, 1e4)     
+Omega <- 1:6          
+
+freq_face3 <- function(n) {
+  mean(sample(Omega, n, replace = TRUE) == 3)
+}
+
+f_n <- sapply(N, freq_face3)
+
+plot(N, f_n, type = "l", lwd = 2, col = "steelblue",
+     main = "Frequência relativa da face 3",
+     xlab = "Número de simulações",
+     ylab = "Frequência observada")
+abline(h = 1/6, col = "red", lty = 2)  
+
+```
+
+

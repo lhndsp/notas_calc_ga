@@ -1,0 +1,21 @@
+# Funções Reais
+
+::: {#def-funcreal name="Função"}
+Sejam $A$ e $B$ subconjuntos de $\mathbb{R}$ chamados **dominío** e **imagem** respectivamente, definimos como $f: A \rightarrow B$ a relação funcional em que: 
+
+$$
+\forall x \in A \ \exists! \ y \in B \ \mid \ f(x) = y
+$$
+Note que **todo elemento de A** é associado a apenas um elemento em B, sendo que **não nescessariamente todo elemento de B** esta associado a A, o subconjunto $C \in B: \left\{ y\ | \ y = f(x)\right\}$ é chamado **contradominio** de $f$.
+
+Ao conjunto de pontos $\left\{x, f(x) \ | \ x \in B\right\} \in \mathbb{R^2}$ damos o nome de **gráfico** da função $f$
+:::
+
+
+
+
+
+
+
+
+
