@@ -20,10 +20,10 @@ chamado evento impossível e $\omega_i \in \Omega \ | \ P(\omega_i) = 1$ evento 
     
 :::
 
-Noutras palavras, probabilidade é a abstração numérica da possibilidade de ocorrencia de um certo evento dentre conjunto de eventos possiveis num experimento. Surgem então correntes que se destacam na formulação de $P(\omega_i)$, sendo as príncipais:
+Noutras palavras, probabilidade é a abstração numérica da possibilidade de ocorrencia de um certo evento dentre conjunto de eventos possiveis num experimento. Surgem então correntes que se destacam na formulação de $P(\omega_i)$, sendo as principais:
 
 
-::: {#def-probclassic name="Probabilidade Classíca"}
+::: {#def-probclassic name="Probabilidade Clássica"}
 Dado $A_i \in \Omega \ \mid \ A_i: \left\{\omega_1, ..., \omega_n\right\}, ||\Omega||=N \Rightarrow P(A_i) = \frac{n}{N}$, ou seja, ao realizar um experimento, computamos como probabilidade de ocorrência de $A_i$ como a razão entre os $n$ eventos simples que compoe o evento em questão e o total de eventos simples possíveis.
 :::
 
