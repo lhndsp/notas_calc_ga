@@ -1,4 +1,4 @@
-# Funções Reais
+# Definições básicas
 
 ::: {#def-funcreal name="Função"}
 Sejam $A$ e $B$ subconjuntos de $\mathbb{R}$ chamados **dominío** e **imagem** respectivamente, definimos como $f: A \rightarrow B$ a relação funcional em que: 

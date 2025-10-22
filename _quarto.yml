@@ -11,21 +11,27 @@ book:
   chapters:
     - index.qmd
   
-    - part: files/reais_intro.qmd
+    - part: "Números Reais"
+      chapters:
+        - files/reais_intro.qmd
+        
+    - part: "Funções"
       chapters:
         - files/funcoes_reais.qmd
         - files/invfunc.qmd
         - files/simetria_funcoes_reais.qmd
         - files/polinomios.qmd
-        
-    - part: files/derivadas_prop.qmd
-      chapters:
+        - files/derivadas_prop.qmd
         - files/integrais_prop.qmd
-        - files/ex_espiral.qmd
-        - files/references.qmd
-    - part: files/probabilidade_def.qmd
+        
+    - part: "Probabilidade"
       chapters: 
-        - files/prob_opp.qmd
+        - files/probabilidade_def.qmd
+        
+    - files/references.qmd
+    
+  appendices: 
+    - files/ex_espiral.qmd
 
 bibliography: references.bib
 
@@ -46,6 +52,8 @@ crossref:
   cnj-prefix: axioma
   exr-title: Exercício
   exr-prefix: exercício
+  appendix-title: "App."
+  appendix-delim: ":"
 
     
 

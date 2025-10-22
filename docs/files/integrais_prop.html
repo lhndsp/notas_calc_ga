@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Propriedades do Integral – Notas de Aula: Cálculo e Geometria Analítica</title>
+<title>7&nbsp; Propriedades do Integral – Notas de Aula: Cálculo e Geometria Analítica</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../files/ex_espiral.html" rel="next">
+<link href="../files/probabilidade_def.html" rel="next">
 <link href="../files/derivadas_prop.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -112,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/derivadas_prop.html">Propriedades da derivada</a></li><li class="breadcrumb-item"><a href="../files/integrais_prop.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Propriedades do Integral</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/funcoes_reais.html">Funções</a></li><li class="breadcrumb-item"><a href="../files/integrais_prop.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Propriedades do Integral</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -147,7 +147,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../files/reais_intro.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Números Reais</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -156,34 +156,16 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/funcoes_reais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Funções Reais</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/invfunc.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">invfunc.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/simetria_funcoes_reais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simetria de funções</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/polinomios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Funções Polinomiais Reais</span></span></a>
+  <a href="../files/reais_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Números Reais</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../files/derivadas_prop.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Propriedades da derivada</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Funções</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -191,28 +173,46 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../files/funcoes_reais.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Definições básicas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/invfunc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Função Inversa</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/simetria_funcoes_reais.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Simetria de funções</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/polinomios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Funções Polinomiais Reais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/derivadas_prop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Propriedades da derivada</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../files/integrais_prop.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Propriedades do Integral</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/ex_espiral.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Espiral de Teodoro</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bibliografia</span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Propriedades do Integral</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../files/probabilidade_def.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probabilidade Básica</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Probabilidade</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -220,8 +220,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/prob_opp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">prob_opp.html</span></span></a>
+  <a href="../files/probabilidade_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Probabilidade Básica</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliografia</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/ex_espiral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Espiral de Teodoro</span></span></a>
   </div>
 </li>
       </ul>
@@ -237,9 +260,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/derivadas_prop.html">Propriedades da derivada</a></li><li class="breadcrumb-item"><a href="../files/integrais_prop.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Propriedades do Integral</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/funcoes_reais.html">Funções</a></li><li class="breadcrumb-item"><a href="../files/integrais_prop.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Propriedades do Integral</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Propriedades do Integral</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Propriedades do Integral</span></h1>
 </div>
 
 
@@ -258,57 +281,57 @@ window.Quarto = {
 
 <p>A seguir são apresentadas as propriedades do integral como teoremas, bem como suas demonstrações.</p>
 <div id="thm-intadd" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.1 (Adição)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.1 (Adição)</strong></span> <span class="math display">\[
     \int_a^b [s(x) + t(x)]dx = \int_a^b s(x)dx + \int_a^b t(x)dx
 \]</span></p>
 </div>
 <div id="thm-inthomo" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.2 (Homogeniedade)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.2 (Homogeniedade)</strong></span> <span class="math display">\[
     \int_a^b cs(x)dx = c \int_a^b s(x)dx, \ c \in \mathbb{R}
 \]</span></p>
 </div>
 <div id="thm-intcomp" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.3 (Comparabilidade)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.3 (Comparabilidade)</strong></span> <span class="math display">\[
     \int_a^b s(x)dx &lt; \int_a^b t(x) \Leftrightarrow s(x) &lt; t(x) \ \forall \ x \in \left[a, b\right]
 \]</span></p>
 </div>
 <div id="thm-intaddintv" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.4 (Aditividade com respeito ao intervalo de integração)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.4 (Aditividade com respeito ao intervalo de integração)</strong></span> <span class="math display">\[
     \int_a^c s(x)dx + \int_c^b s(x)dx = \int_a^b s(x)dx, \ a&lt;c&lt;b
 \]</span></p>
 </div>
 <div id="thm-intinvar" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.5 (Invariância sob translação)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.5 (Invariância sob translação)</strong></span> <span class="math display">\[
     \int_a^b s(x)dx = \int_{a+c}^{b+c} s(x)dx, \ \forall \ c \in \mathbb{R}
 \]</span></p>
 </div>
 <div id="thm-intdilatacao" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.6 (Dilatação ou contração do intervalo de integração)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.6 (Dilatação ou contração do intervalo de integração)</strong></span> <span class="math display">\[
     \int_{ka}^{kb} s( \frac{x}{k} )dx = k \int_a^b s(x)dx, \ k &gt; 0
 \]</span></p>
 </div>
 <div id="thm-intsimetria" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.7 (Simetria)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.7 (Simetria)</strong></span> <span class="math display">\[
     \int_b^a s(x)dx = -\int_a^b s(x)dx, \ a&lt;b
 \]</span></p>
 </div>
 <div id="thm-intneutro" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.8 (Elemento neutro)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.8 (Elemento neutro)</strong></span> <span class="math display">\[
     \int_a^a s(x)dx = 0
 \]</span></p>
 </div>
 <div id="thm-intaddintv1" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.9 (Generalização do Teorema da Aditividade por Simetria e Elemento Neutro)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.9 (Generalização do Teorema da Aditividade por Simetria e Elemento Neutro)</strong></span> <span class="math display">\[
     \int_a^a s(x)dx = 0
 \]</span></p>
 </div>
 <div id="thm-intreflex" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.10 (Reflexão)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.10 (Reflexão)</strong></span> <span class="math display">\[
     \int_b^a s(x)dx = \int_{-a}^{-b} s(-x)dx
 \]</span></p>
 </div>
 <div id="thm-intlinearidade" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 5.11 (Linearidade)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 7.11 (Linearidade)</strong></span> <span class="math display">\[
     \int_a^b [c_1s(x)+c_2t(x)]dx = c_1 \int_a^b s(x)dx + c_2 \int_a^b t(x)dx
 \]</span></p>
 </div>
@@ -720,12 +743,12 @@ window.Quarto = {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../files/derivadas_prop.html" class="pagination-link" aria-label="Propriedades da derivada">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Propriedades da derivada</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Propriedades da derivada</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../files/ex_espiral.html" class="pagination-link" aria-label="Espiral de Teodoro">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Espiral de Teodoro</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../files/probabilidade_def.html" class="pagination-link" aria-label="Probabilidade Básica">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Probabilidade Básica</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
